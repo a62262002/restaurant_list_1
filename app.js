@@ -1,11 +1,28 @@
-// require pacjages used in the project
+// require packages used in the project
 const express = require("express");
 const app = express();
+const mongoose = require("mongoose");
 const port = 3000;
+
+mongoose.connect("mongodb://localhost/restaurant", { useNewUrlParser: true });
+const db = mongoose.connection;
 
 // require express-HTMLHeadingElement;ebars here
 const exphbs = require("express-handlebars");
 const restaurantList = require("./restaurant.json");
+
+// 連線異常
+db.on("error", () => {
+  console.log("mongodb error!");
+});
+
+// 連線成功
+db.once("open", () => {
+  console.log("mongodb connected!");
+});
+
+// 載入restaurant model
+const Restaurant = require("./models/restaurant");
 
 // setting templates engine
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
