@@ -31,18 +31,49 @@ app.set("view engine", "handlebars");
 // setting static files
 app.use(express.static("public"));
 
-// route setting
+// restaurant首頁
 app.get("/", (req, res) => {
   res.render("index", { restaurants: restaurantList.results });
 });
 
-// show
+// 列出全部Todo
+app.get("/restaurants", (req, res) => {
+  res.send("列出所有Restaurant");
+});
+
+// 新增一筆restaurant頁面
+app.get("/restaurants/new", (req, res) => {
+  res.send("新增Restaurant頁面");
+});
+
+// 顯示一筆Restaurant的詳細內容
 app.get("/restaurants/:restaurant_id", (req, res) => {
-  console.log("req.params.restaurant_id", req.params.restaurant_id);
-  const restaurant = restaurantList.results.find(
-    restaurant => restaurant.id.toString() === req.params.restaurant_id
-  );
-  res.render("show", { restaurant: restaurant });
+  // console.log("req.params.restaurant_id", req.params.restaurant_id);
+  // const restaurant = restaurantList.results.find(
+  //   restaurant => restaurant.id.toString() === req.params.restaurant_id
+  // );
+  // res.render("show", { restaurant: restaurant });
+  res.send("顯示Restaurant的詳細內容");
+});
+
+// 新增一筆Restaurant
+app.post("/restaurants", (req, res) => {
+  res.send("建立Restaurant");
+});
+
+// 修改Restaurant頁面
+app.get("/restaurants/:id/edit", (req, res) => {
+  res.send("修改Retaurant頁面");
+});
+
+// 修改Restaurant
+app.post("/restaurants/:id/edit", (req, res) => {
+  res.send("修改Restaurant");
+});
+
+// 刪除Restaurant
+app.post("/restaurants/:id/delete", (req, res) => {
+  res.send("刪除Restaurant");
 });
 
 // search
