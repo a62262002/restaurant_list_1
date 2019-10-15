@@ -4,12 +4,12 @@ const app = express();
 const mongoose = require("mongoose");
 const port = 3000;
 
-mongoose.connect("mongodb://localhost/restaurant", { useNewUrlParser: true });
+mongoose.connect("mongodb://localhost/restaurant", { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
 
 // require express-HTMLHeadingElement;ebars here
 const exphbs = require("express-handlebars");
-const restaurantList = require("./restaurant.json");
+// const restaurantList = require("./restaurant.json");
 
 // 連線異常
 db.on("error", () => {
@@ -33,12 +33,16 @@ app.use(express.static("public"));
 
 // restaurant首頁
 app.get("/", (req, res) => {
-  res.render("index", { restaurants: restaurantList.results });
+  Restaurant.find((err, restaurants) => {
+    if (err) return console.error(err)
+    return res.render('index', { restaurants: restaurants })
+  })
+  // res.render("index", { restaurants: restaurantList.results });
 });
 
 // 列出全部Todo
 app.get("/restaurants", (req, res) => {
-  res.send("列出所有Restaurant");
+  return res.redirect('/')
 });
 
 // 新增一筆restaurant頁面
