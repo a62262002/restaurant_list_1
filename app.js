@@ -55,13 +55,11 @@ app.get("/restaurants/new", (req, res) => {
 });
 
 // 顯示一筆Restaurant的詳細內容
-app.get("/restaurants/:restaurant_id", (req, res) => {
-  // console.log("req.params.restaurant_id", req.params.restaurant_id);
-  // const restaurant = restaurantList.results.find(
-  //   restaurant => restaurant.id.toString() === req.params.restaurant_id
-  // );
-  // res.render("show", { restaurant: restaurant });
-  res.send("顯示Restaurant的詳細內容");
+app.get("/restaurants/:id", (req, res) => {
+  Restaurant.findById(req.params.id, (err, restaurant) => {
+    if (err) return console.error(err)
+    return res.render('detail', { restaurant: restaurant })
+  })
 });
 
 // 新增一筆Restaurant
