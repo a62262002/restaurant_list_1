@@ -9,7 +9,11 @@ const db = mongoose.connection;
 
 // require express-HTMLHeadingElement;ebars here
 const exphbs = require("express-handlebars");
-// const restaurantList = require("./restaurant.json");
+
+// 引用body-parser
+const bodyParser = require('body-parser')
+// 設定bodyParser
+app.use(bodyParser.urlencoded({ extended: true }))
 
 // 連線異常
 db.on("error", () => {
@@ -47,7 +51,7 @@ app.get("/restaurants", (req, res) => {
 
 // 新增一筆restaurant頁面
 app.get("/restaurants/new", (req, res) => {
-  res.send("新增Restaurant頁面");
+  return res.render('new')
 });
 
 // 顯示一筆Restaurant的詳細內容
@@ -62,7 +66,27 @@ app.get("/restaurants/:restaurant_id", (req, res) => {
 
 // 新增一筆Restaurant
 app.post("/restaurants", (req, res) => {
-  res.send("建立Restaurant");
+
+  // 建立restaurant model
+  const restaurant = new Restaurant({
+    name: req.body.name,
+    name_en: req.body.name_en,
+    category: req.body.category,
+    image: req.body.image,
+    location: req.body.location,
+    phone: req.body.phone,
+    google_map: req.body.google_map,
+    rating: req.body.rating,
+    description: req.body.description,
+  })
+
+  // 存入資料庫
+  restaurant.save(err => {
+    if (err) return console.error(err)
+
+    // 新增完成導回首頁
+    return res.redirect('/')
+  })
 });
 
 // 修改Restaurant頁面
