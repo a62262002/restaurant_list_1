@@ -1,3 +1,4 @@
+{{!-- ./views/detail.handlebars --}}
 <h1 class="mb-1 restaurant-show-title">{{{restaurant.name}}}</h1>
 <div class="container">
   <div class="row">
@@ -38,4 +39,7 @@
         style="max-width: 600px;">
     </div>
   </div>
+  <a href="/">back</a>
+  <a href="/restaurants/{{{restaurant.id}}}/edit">edit</a>
+  <button type="submit">delete</button>
 </div>

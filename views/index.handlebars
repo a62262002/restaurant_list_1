@@ -1,3 +1,5 @@
+{{!-- ./views/index.handlebars --}}
+
 <!-- search bar -->
 <div class="container search-bar">
   <div class="search-bar-outer">
@@ -15,6 +17,8 @@
     </div>
   </div>
 </div>
+
+<a href="/restaurants/new">Create</a>
 
 <!-- restaurant list -->
 <div class="container mt-5">
@@ -37,6 +41,8 @@
               </span>
 
             </div>
+            <a href="/restaurants/{{{this.id}}}/edit">edit</a>
+            <button type="submit">delete</button>
           </div>
         </a>
         {{/each}}
