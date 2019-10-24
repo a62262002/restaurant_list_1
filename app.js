@@ -117,7 +117,13 @@ app.post("/restaurants/:id/edit", (req, res) => {
 
 // 刪除Restaurant
 app.post("/restaurants/:id/delete", (req, res) => {
-  res.send("刪除Restaurant");
+  Restaurant.findById(req.params.id, (err, restaurant) => {
+    if (err) return console.error(err)
+    restaurant.remove(err => {
+      if (err) return console.log(err)
+      return res.redirect('/')
+    })
+  })
 });
 
 // search
