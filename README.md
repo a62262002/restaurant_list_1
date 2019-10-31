@@ -26,7 +26,7 @@
 1. 下載 restaurant_list 資料夾，並輸入以下指令下載
 
 ```
-$ git clone https://github.com/a62262002/restaurant_list.git
+$ git clone https://github.com/a62262002/restaurant_list1.git
 ```
 
 2. 從終端機安裝 npm 套件，輸入以下指令
@@ -58,11 +58,11 @@ http://localhost:3000
 ## 專案內容
 
 - 顯示餐廳所有清單
-  ![image](https://github.com/a62262002/restaurant_list/blob/master/restaurant_list.png)
+  ![image](https://github.com/a62262002/restaurant_list_1/blob/master/restaurant_list.png)
 - 顯示個別餐廳詳細介紹
-  ![image](https://github.com/a62262002/restaurant_list/blob/master/restaurant_list_index.png)
+  ![image](https://github.com/a62262002/restaurant_list_1/blob/master/restaurant_list_index.png)
 - 搜尋餐廳
-  ![image](https://github.com/a62262002/restaurant_list/blob/master/restaurant_list_index_research.png)
+  ![image](https://github.com/a62262002/restaurant_list_1/blob/master/restaurant_list_index_research.png)
 
 ## 作者
 
