@@ -58,11 +58,13 @@ http://localhost:3000
 ## 專案內容
 
 - 顯示餐廳所有清單
-  ![image](https://github.com/a62262002/restaurant_list_1/blob/master/restaurant_list.png)
-- 顯示個別餐廳詳細介紹
-  ![image](https://github.com/a62262002/restaurant_list_1/blob/master/restaurant_list_index.png)
-- 搜尋餐廳
-  ![image](https://github.com/a62262002/restaurant_list_1/blob/master/restaurant_list_index_research.png)
+  ![image](https://github.com/a62262002/restaurant_list_1/blob/master/restaurant_all.png)
+- 創建餐廳
+  ![image](https://github.com/a62262002/restaurant_list_1/blob/master/restaurant_create.png)
+- 餐廳詳細內容
+  ![image](https://github.com/a62262002/restaurant_list_1/blob/master/restaurant_detail.png)
+- 編輯餐廳內容
+  ![image](https://github.com/a62262002/restaurant_list_1/blob/master/restaurant_edit.png)
 
 ## 作者
 
