@@ -10,6 +10,7 @@
 - 使用者可以新增餐廳資料。
 - 使用者可以編輯餐廳資料。
 - 使用者可以刪除餐廳資料。
+- 使用者可以依照名稱及評分排列。
 
 ## 安裝環境
 
@@ -26,7 +27,7 @@
 1. 下載 restaurant_list 資料夾，並輸入以下指令下載
 
 ```
-$ git clone https://github.com/a62262002/restaurant_list1.git
+$ git clone https://github.com/a62262002/restaurant_list_1.git
 ```
 
 2. 從終端機安裝 npm 套件，輸入以下指令
