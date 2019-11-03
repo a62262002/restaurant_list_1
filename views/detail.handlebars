@@ -39,9 +39,9 @@
         style="max-width: 600px;">
     </div>
   </div>
-  <a href="/">back</a>
-  <a href="/restaurants/{{{restaurant.id}}}/edit">edit</a>
+  <a href="/" class="btn btn-secondary mb-2">back</a>
+  <a href="/restaurants/{{{restaurant.id}}}/edit" class="btn btn-success mb-2">edit</a>
   <form action="/restaurants/{{{restaurant.id}}}/delete?_method=DELETE" method="POST" style="display: inline;">
-    <button type="submit">delete</button>
+    <button type="submit" class="btn btn-danger mb-2">delete</button>
   </form>
 </div>
