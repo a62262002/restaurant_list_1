@@ -20,7 +20,7 @@
 - Express v4.17.1
 - express-handlebars v3.1.0
 - body-parser v1.19.0
-- mongoose v5.7.1
+- mongoose v5.7.7
 
 ## 安裝
 
@@ -66,10 +66,10 @@ http://localhost:3000
   ![image](https://github.com/a62262002/restaurant_list_1/blob/master/restaurant_detail.png)
 - 編輯餐廳內容
   ![image](https://github.com/a62262002/restaurant_list_1/blob/master/restaurant_edit.png)
-<<<<<<< HEAD
-=======
+  <<<<<<< HEAD
+  =======
 
->>>>>>> refs/remotes/origin/master
+> > > > > > > refs/remotes/origin/master
 
 ## 作者
 
