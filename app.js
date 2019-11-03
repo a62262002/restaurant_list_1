@@ -48,22 +48,6 @@ app.use(express.static("public"));
 app.use("/", require("./routes/home"));
 app.use("/restaurants", require("./routes/restaurant"));
 
-// search
-app.get("/search", (req, res) => {
-  const keyword = req.query.keyword;
-  const regexp = new RegExp(keyword, "i");
-
-  Restaurant.find((err, collection) => {
-    if (err) return console.error(err);
-    const restaurants = collection.filter(item => item.name.match(regexp));
-    res.render("index", { restaurants: restaurants, keyword: keyword });
-  });
-
-  // const restaurants = Restaurant.results.filter(restaurants => {
-  //   return restaurants.name.toLowerCase().includes(keyword.toLowerCase());
-  // });
-});
-
 // start and listening on the Express server
 app.listen(port, () => {
   console.log(`Express is listening on localhost:${port}`);
