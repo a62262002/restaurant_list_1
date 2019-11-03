@@ -66,6 +66,10 @@ http://localhost:3000
   ![image](https://github.com/a62262002/restaurant_list_1/blob/master/restaurant_detail.png)
 - 編輯餐廳內容
   ![image](https://github.com/a62262002/restaurant_list_1/blob/master/restaurant_edit.png)
+<<<<<<< HEAD
+=======
+
+>>>>>>> refs/remotes/origin/master
 
 ## 作者
 
